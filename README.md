@@ -21,3 +21,6 @@ Um projeto para analisar o codigo dos stags
 | Nome  | Desafio          |Link|
 |-------|------------------|-|
 | Lucas | Jogo dos tijolos |https://judge.beecrowd.com/en/problems/view/1436|
+| Lucas | Iniciante em matemática || Lucas | Jogo dos tijolos |https://judge.beecrowd.com/en/problems/view/1436||
+| Lucas | Pizzaria alfredo's |https://judge.beecrowd.com/en/problems/view/1641|
+
