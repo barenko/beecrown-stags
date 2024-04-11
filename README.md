@@ -21,7 +21,7 @@ Um projeto para analisar o codigo dos stags
 |Nome|Desafio|Link|
 |-|-|-|
 |Pedro|Triangulo Trinomial|https://judge.beecrowd.com/pt/problems/view/1795|
-|Pedro|Jogo de Boca|https://judge.beecrowd.com/pt/problems/view/2667|
+|Pedro|Guilherme e Suas Pipas|https://judge.beecrowd.com/pt/problems/view/1921|
 |Pedro|amelborP mU|https://judge.beecrowd.com/pt/problems/view/2066|
 
 
