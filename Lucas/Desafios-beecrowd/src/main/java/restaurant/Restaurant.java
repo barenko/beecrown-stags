@@ -1,6 +1,7 @@
 package restaurant;
 
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.List;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
@@ -8,33 +9,55 @@ import static java.lang.Math.sqrt;
 public class Restaurant {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Insira a quantidade de casos: ");
-        int N = scanner.nextInt();
+        List<Integer> R = Arrays.asList(38, 35, 50, 38, 70);
+        List<Integer> L = Arrays.asList(40, 20, 60, 40, 20);
+        List<Integer> A = Arrays.asList(60, 70, 80, 60, 90);
 
-        int R = 35;
+        for (int i = 0; i < R.size(); i++) {
 
-        int L = 20;
-        int A = 70;
+            int rAtual = 0;
+            int aAtual = 0;
+            int lAtual = 0;
+            boolean fits = false;
 
-        for (int i = 0; i < N; i++) {
-            Boolean fits = fits_on(R, L, A);
-            if (fits){
-                System.out.println("Cabe dentro do círculo.");
-            }else{
-                System.out.println("Não cabe dentro do círculo.");
+            if (i == 0){
+                for (int j = 0; j < 1; j++) {
+                    rAtual = R.get(i);
+                    System.out.println(rAtual);
+                    lAtual = L.get(i);
+                    System.out.println(lAtual);
+                    aAtual = A.get(i);
+                    System.out.println(aAtual);
+                }
+            }
+
+            if (i >= 1){
+            for (int j = 1; j < 2; j++) {
+                rAtual = R.get(i);
+                System.out.println(rAtual);
+                lAtual = L.get(i);
+                System.out.println(lAtual);
+                aAtual = A.get(i);
+                System.out.println(aAtual);
+            }
+            }
+
+            double oppsiteSide = pow((aAtual / 2), 2);
+            double adjacentSide = pow((lAtual / 2), 2);
+
+            double hypotenuse = sqrt(adjacentSide + oppsiteSide);
+
+            if (rAtual >= hypotenuse) {
+                fits = true;
+            }
+
+            if (fits) {
+                System.out.println("Pizza " + (i+1) + " fits on the table.");
+            } else {
+                System.out.println("Pizza " + (i+1) + " does not fit on the table.");
+                System.out.println(0);
             }
         }
-                System.out.println(0);
-    }
-
-    private static Boolean fits_on(int R, int L, int A){
-        Double oppsiteSide = pow(((double) A / 2), 2);
-        Double adjacentSide = pow(((double) L / 2), 2);
-
-        double hypotenuse = sqrt(adjacentSide + oppsiteSide);
-
-        return R >= hypotenuse;
     }
 }

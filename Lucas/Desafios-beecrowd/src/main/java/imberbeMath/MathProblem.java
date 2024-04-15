@@ -10,7 +10,6 @@ public class MathProblem {
     public static void main(String[] args) {
 
         Scanner leitura = new Scanner(System.in);
-        Scanner leitura2 = new Scanner(System.in);
 
 
         System.out.println("Quantidade de números a serem lidos:");
