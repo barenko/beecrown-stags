@@ -10,17 +10,18 @@ public class MathProblem {
     public static void main(String[] args) {
 
         Scanner leitura = new Scanner(System.in);
+        Scanner leitura2 = new Scanner(System.in);
 
-
-        System.out.println("Quantidade de números a serem lidos:");
         int N = leitura.nextInt();
 
         List<Integer> listPrime = new ArrayList<>();
         
-        for (int i = 1; i < N; i++) {
+        for (int i = 1; i <= N; i++) {
             Boolean prime = isPrime(i);
+            int M = leitura2.nextInt();
+
             if (prime){
-                listPrime.add(i);
+                listPrime.add(M);
             }
         }
         System.out.println(listPrime);

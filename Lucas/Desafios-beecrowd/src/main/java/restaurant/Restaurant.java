@@ -2,62 +2,38 @@ package restaurant;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 public class Restaurant {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int i = 0;
 
+        while (true) {
+            int R = scanner.nextInt();
 
-        List<Integer> R = Arrays.asList(38, 35, 50, 38, 70);
-        List<Integer> L = Arrays.asList(40, 20, 60, 40, 20);
-        List<Integer> A = Arrays.asList(60, 70, 80, 60, 90);
-
-        for (int i = 0; i < R.size(); i++) {
-
-            int rAtual = 0;
-            int aAtual = 0;
-            int lAtual = 0;
-            boolean fits = false;
-
-            if (i == 0){
-                for (int j = 0; j < 1; j++) {
-                    rAtual = R.get(i);
-                    System.out.println(rAtual);
-                    lAtual = L.get(i);
-                    System.out.println(lAtual);
-                    aAtual = A.get(i);
-                    System.out.println(aAtual);
-                }
+            if (R == 0) {
+                break;
             }
 
-            if (i >= 1){
-            for (int j = 1; j < 2; j++) {
-                rAtual = R.get(i);
-                System.out.println(rAtual);
-                lAtual = L.get(i);
-                System.out.println(lAtual);
-                aAtual = A.get(i);
-                System.out.println(aAtual);
-            }
-            }
+            i++;
+            int W = scanner.nextInt();
+            int L = scanner.nextInt();
 
-            double oppsiteSide = pow((aAtual / 2), 2);
-            double adjacentSide = pow((lAtual / 2), 2);
+            double diagonal = Math.sqrt(W * W + L * L);
 
-            double hypotenuse = sqrt(adjacentSide + oppsiteSide);
+            double diameter = 2.0 * R;
 
-            if (rAtual >= hypotenuse) {
-                fits = true;
-            }
 
-            if (fits) {
-                System.out.println("Pizza " + (i+1) + " fits on the table.");
+            if (diagonal <= diameter) {
+                System.out.println("Pizza " + i + " fits on the table.");
             } else {
-                System.out.println("Pizza " + (i+1) + " does not fit on the table.");
-                System.out.println(0);
+                System.out.println("Pizza " + i + " does not fit on the table.");
             }
         }
+        scanner.close();
     }
 }

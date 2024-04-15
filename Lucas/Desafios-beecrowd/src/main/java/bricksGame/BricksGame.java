@@ -1,49 +1,37 @@
 package bricksGame;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Scanner;
 
 public class BricksGame {
 
     public static void main(String[] args) {
-        List<Integer> listAges = Arrays.asList(5, 19, 17, 16, 14, 12);
+        Scanner scanner = new Scanner(System.in);
+        Scanner scanner2 = new Scanner(System.in);
 
-        int age = captainAge(listAges);
-    }
+        int T = scanner.nextInt();
 
-    public static int captainAge(List<Integer> ages){
-        int captainAge = 0;
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i <= T; i++) {
+            int N = scanner2.nextInt();
 
-            for (int j = 12; j <= 19; j++) {
-                int young = 0;
-                int older = 0;
+            if (N > 1 && N <= 10){
+                int[] ages = new int[N];
 
-                for (int playerAge : ages) {
-                    if (playerAge < j) {
-                        young++;
-                    } else if (playerAge > j) {
-                        older++;
-                    }
+                System.out.println(Arrays.toString(ages));
+
+                for (int j = 0; j < 5; j++) {
+                    ages[j] = scanner.nextInt();
                 }
 
-                if (young == older) {
-                    captainAge = j + 1;
-                    System.out.println("Case " + i + ": " + captainAge);
-                    break;
-                }
+                System.out.println(Arrays.toString(ages));
+
+                int captainI = N / 2;
+                int captainAge = ages[captainI];
+
+                System.out.println("Case " + i + ": " + captainAge);
+            }else{
+                break;
             }
-        }
-        return captainAge;
-    }
-
-
-    private void listTeste(int qtdList, int number){
-        for (int i = 0; i < qtdList; i++) {
-            List<Integer> list = new ArrayList<>();
-            
-            list.add(number);
         }
     }
 }
