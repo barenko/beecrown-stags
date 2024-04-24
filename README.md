@@ -18,6 +18,9 @@ Um projeto para analisar o codigo dos stags
 # Tabela de controle
 
 ---
-|Nome|Desafio|Link|
-|-|-|-|
-|Fulano|Hello World|https://judge.beecrowd.com/pt/problems/view/111|
+| Nome  | Desafio          |Link|
+|-------|------------------|-|
+| Lucas | Jogo dos tijolos |https://judge.beecrowd.com/en/problems/view/1436|
+| Lucas | Iniciante em matemática || Lucas | Jogo dos tijolos |https://judge.beecrowd.com/en/problems/view/1436||
+| Lucas | Pizzaria alfredo's |https://judge.beecrowd.com/en/problems/view/1641|
+
