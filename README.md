@@ -20,4 +20,9 @@ Um projeto para analisar o codigo dos stags
 ---
 |Nome|Desafio|Link|
 |-|-|-|
-|Fulano|Hello World|https://judge.beecrowd.com/pt/problems/view/111|
+|Pedro|Triangulo Trinomial|https://judge.beecrowd.com/pt/problems/view/1795|
+|Pedro|Guilherme e Suas Pipas|https://judge.beecrowd.com/pt/problems/view/1921|
+|Pedro|Jogo de Boca|https://judge.beecrowd.com/pt/problems/view/2667|
+|Pedro|Soma Natural|https://judge.beecrowd.com/pt/problems/view/1805|
+
+
